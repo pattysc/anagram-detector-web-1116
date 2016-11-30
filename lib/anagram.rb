@@ -4,11 +4,11 @@ class Anagram
   def initialize(findword)
     @findword = findword
   end
-  attr_reader :word
+  attr_reader :findword
 
   def match(array)
     array.select do |word|
-      word.chars.sort == @findword.chars.sort
+      word.chars.sort == findword.chars.sort
     end
   end
 end
